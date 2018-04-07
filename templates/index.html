@@ -5,20 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		function checkChar(){
-			$('#comment').val().length > 150
-			$('#comment').val($('#comment').val().substring(0,150))
-		}
-		$(document).ready(function(){
-			$(document).on('keyup','#comment', function(){
-				checkChar();
-			});
-		});
-		
+
 	</script>
 </head>
 	<body>
 		<div class="container">
+			<div><h3>Registration Form</h3></div>
 			<form action="/submission" method='post'>
 				<div>
 					{% with messages = get_flashed_messages() %}
@@ -30,26 +22,20 @@
   					{% endwith %}
 				</div>
 				<div class="col">
-					<p>Your Name:</p>
-					<p>Dojo Location:</p>
-					<p>Favorite Language</p>
+					<p>First Name:</p>
+					<p>Last Name:</p>
+					<p>Date of Birth:</p>
+					<p>Password:</p>
+					<p>Confirm:</p>
+					<p>Email:</p>
 				</div>
 				<div class='col'>
-					<input type="text" name="name">
-					<select name="location">
-						<option value="San Jose">San Jose</option>
-						<option value="Chicago">Chicago</option>
-						<option value="Seattle">Seattle</option>
-					</select>
-					<select name="favorite_language">
-						<option value="Python">Python</option>
-						<option value="JavaScript">JavaScript</option>
-						<option value="Java">Java</option>
-					</select>
-				</div>
-				<div class="row">
-					<p>Comment (optional)</p>
-					<textarea name="comment" id="comment"></textarea>
+					<input type="text" name="first">
+					<input type="text" name="last">
+					<input type="date" name="dob">
+					<input type="password" name="password">
+					<input type="password" name="confirm">
+					<input type="email" name="email">
 				</div>
 				<input type="submit" name="Submit">
 			</form>

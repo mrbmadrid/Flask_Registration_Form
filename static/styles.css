@@ -1,0 +1,53 @@
+.container {
+	width: 30%;
+	margin: 20px auto;
+	box-shadow: 2px 2px 2px black;
+	white-space: nowrap;
+	padding-bottom: 20px;
+}
+
+.row {
+	width: 100%;
+	margin: none;
+	padding: none;
+	text-align: center;
+}
+
+.col {
+	width: 50%;
+	margin: none;
+	padding: none;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.error {
+	color: red;
+}
+
+.col>* {
+	vertical-align: top;
+}
+
+input, select{
+	vertical-align: top;
+	width: 90%;
+	display: block;
+	margin: 15px 0px;
+}
+
+input[type="submit"] {
+	width: 75px;
+	margin: auto;
+}
+
+#comment {
+	width: 90%;
+	margin: 0px auto;
+	padding: 0px;
+	white-space: pre-wrap;
+	vertical-align: top;
+	text-align: left;
+}
+
+
